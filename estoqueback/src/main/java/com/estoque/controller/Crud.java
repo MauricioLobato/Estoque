@@ -36,12 +36,17 @@ public class Crud {
 
     @PostMapping("/cadastrar/{nome}/{quant}")
     public ResponseEntity<Produto> createProduto(@PathVariable String nome, @PathVariable int quant) {
-        return new ResponseEntity<>(createProduto.create(nome, quant), HttpStatus.OK );
+        return new ResponseEntity<>(createProduto.create(nome, quant), HttpStatus.OK);
     }
 
     @GetMapping("/consultar")
     public List<Produto> retrieveProduto() {
         return retrieveProduto.allProdutos();
+    }
+
+    @GetMapping("consultar/{nome}")
+    public List<Produto> retrieveProdutoByName(@PathVariable String nome) {
+        return retrieveProduto.getProdutoByNome(nome);
     }
 
     @PutMapping("/atualizar")

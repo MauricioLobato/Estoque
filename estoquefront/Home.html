@@ -17,6 +17,10 @@
     <div class="container">
         <h1 class="text-center my-2 text-uppercase font-weight-bold">Controle de estoque</h1>
         <button type="button" class="btn btn-outline-success my-2" data-toggle="modal" data-target="#modalCriar">Adicionar</button>
+        <div class="float-right">
+            <label for="pesquisarNome" class="font-weight-bold">Pesquisar:</label>
+            <input type="text" id="pesquisarNome" placeholder="Pesquisar">
+        </div>
 
         <div class="modal fade" tabindex="-1" id="modalCriar">
             <div class="modal-dialog">
@@ -33,7 +37,7 @@
                         <input type="number" min="0" onkeydown="return false" id="quant">
                     </div>
                     <div class="modal-footer">
-                        <button type="button " class="btn btn-outline-success" onclick="add()" data-dismiss="modal">Salvar</button>
+                        <button type="button " class="btn btn-outline-success" id="addButton"  data-dismiss="modal">Salvar</button>
                     </div>
                 </div>
             </div>
@@ -68,8 +72,8 @@
                         <input type="number" min="0" onkeydown="return false" id="quant2">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary" onclick="att()" data-dismiss="modal">Atualizar</button>
-                        <button type="button" class="btn btn-outline-danger" onclick="del()" data-dismiss="modal">Deletar</button>
+                        <button type="button" id="attButton" class="btn btn-outline-primary"  data-dismiss="modal">Atualizar</button>
+                        <button type="button" id="delButton" class="btn btn-outline-danger"  data-dismiss="modal">Deletar</button>
                     </div>
                 </div>
             </div>
@@ -80,8 +84,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="http://localhost:3000/Home.js"></script>
-
+    <script type="module" src="http://localhost:3000/js/Home.js"></script>
 </body>
 
 </html>

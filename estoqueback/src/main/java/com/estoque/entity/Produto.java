@@ -29,6 +29,7 @@ public class Produto {
     @Column(name = "quantidade", nullable = false, unique = false)
     private int quantidade;
 
+
     public Produto(String nome, boolean estoque, int quantidade) {
         this.nome = nome;
         this.estoque = estoque;

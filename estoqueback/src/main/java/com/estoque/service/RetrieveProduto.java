@@ -17,4 +17,8 @@ public class RetrieveProduto {
     public List<Produto> allProdutos() {
         return produtoRepository.findAll();
     }
+
+    public List<Produto> getProdutoByNome(String nome) {
+        return produtoRepository.findByNome(nome);
+    }
 }
